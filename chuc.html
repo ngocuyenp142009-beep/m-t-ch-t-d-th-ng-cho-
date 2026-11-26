@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>💙 Chúc Ngày 19/11 Rất Vui!</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(180deg, #e0f7fa, #fff9e6, #ffeaf2);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding-top: 160px;
+    overflow: hidden;
+    height: 100vh;
+}
+.card {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 35px;
+    padding: 45px 55px;
+    display: inline-block;
+    box-shadow: 0 10px 40px rgba(100, 180, 255, 0.15);
+}
+h1 {
+    color: #4a90c2;
+    font-size: 34px;
+    margin-bottom: 25px;
+    animation: bounce 2s ease-in-out infinite alternate;
+}
+p {
+    color: #555577;
+    font-size: 20px;
+    line-height: 2;
+}
+.emoji {
+    position: absolute;
+    font-size: 24px;
+    animation: float-up linear infinite;
+    pointer-events: none;
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes float-up {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-60px); opacity: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1>💙 Chúc Các Bạn Nam Ngày 19/11 💙</h1>
+    <p>✨ Chúc các cậu ngày 19/11 thật vui vẻ nhé ✨<br>
+    Không cần quá xuất sắc, chỉ cần bình an là đủ 💛<br>
+    Luôn có lý do để cười, có điều gì đó để yêu thương<br>
+    Và luôn có đủ dũng khí bước đi mỗi ngày 💪<br>
+    Cảm ơn vì đã luôn kiên cường và tuyệt vời 💙<br>
+    Chúc mọi điều tốt đẹp nhất đều đến với bạn! ✨</p>
+</div>
+
+<script>
+const emojis = ['💙', '🤍', '💛', '💚', '🧡', '💜', '🩷', '⭐', '✨', '🌼'];
+function createEmoji() {
+    const emoji = document.createElement('div');
+    emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+    emoji.className = 'emoji';
+    emoji.style.left = Math.random() * 100 + 'vw';
+    emoji.style.animationDuration = (Math.random() * 5 + 4) + 's';
+    document.body.appendChild(emoji);
+    setTimeout(() => emoji.remove(), 9000);
+}
+setInterval(createEmoji, 300);
+</script>
+
+</body>
+</html>
